@@ -18,6 +18,10 @@ python3 mutations_parallel.py   # This script does the same computations as muta
 
 The script save the results in a file called `mutations.csv`
 
+## Results
+
+The file `mutations.csv` list the point mutations observed in the SARS-Cov-2 genome relative to the reference genome `NC_045512`. Each point mutation is represented as a symbol, a number, and another symbol. The first symbol represents the original nucleotide according to the reference genome. The number represents the position of the mutation in the reference genome. The last symbol represents the nucleotide after the mutation. Each mutation is listed with the earliest date it is observed along with the accession code indicating the genome where the mutation first occurred.
+
 ## Requirements
 
 * [Python3](https://www.python.org/)
