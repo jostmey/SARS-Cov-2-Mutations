@@ -20,7 +20,7 @@ from multiprocessing import Pool
 ##########################################################################################
 
 accession_ref = 'NC_045512'
-num_processes = 8
+num_processes = 5  # Each process can require up to approximately 40GB of RAM
 
 ##########################################################################################
 # Load data
@@ -73,6 +73,7 @@ def find_mutations(accession):
         if symbol_ref != symbol:
           mutation = symbol_ref+str(i)+symbol
           mutations.append(mutation)
+    print('Alignment completed for', accession, flush=True)
   return mutations
 
 accessions = list(sequences.keys())
