@@ -22,6 +22,8 @@ The script save the results in a file called `mutations.csv`
 
 The file `mutations.csv` list the point mutations observed in the SARS-Cov-2 genome relative to the reference genome `NC_045512`. Each point mutation is represented as a symbol, a number, and another symbol. The first symbol represents the original nucleotide according to the reference genome. The number represents the position of the mutation in the reference genome. The last symbol represents the nucleotide after the mutation. Each mutation is listed with the earliest date it is observed along with the accession code indicating the genome where the mutation first occurred.
 
+There are two limitations with this analysis. The first limitation is that our analysis excludes insertions and deletions. This is because a preliminary analysis revealed that insertions and deletions occur almost exclusively at the ends of the genome, making it unclear if these insertions and deletions are sequence artifacts or actual mutations. The other limitation is that there is no way to determine if the remaining point mutations are actual mutations or sequencing error. These limitations must be kept in mind going forward.
+
 ## Requirements
 
 * [Python3](https://www.python.org/)
