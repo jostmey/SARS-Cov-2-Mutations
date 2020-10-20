@@ -36,7 +36,9 @@ with open('sequences.csv', 'r') as stream:
 sequences = {}
 with open('sequences.fasta', 'r') as stream:
   for record in SeqIO.parse(stream, 'fasta'):
-    accession = record.name
+    accession = record.name.split('.')[0]
+    if accession in sequences:
+      print('WARNING: Duplicate key for primary accession')
     sequences[accession] = str(record.seq)
 sequence_ref = sequences[accession_ref]
 del sequences[accession_ref]
